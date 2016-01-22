@@ -1,7 +1,5 @@
 $(document).ready(function() {
-
-  $('#maxsize').keyup(updateText);
-  $('#dyntext').keyup(updateText);
+  $(window).resize(updateText);
   updateText();
   $("form").submit(function(event) {
     var messageInput =$("input#userInput").val();
@@ -14,13 +12,10 @@ $(document).ready(function() {
 
 //UI logic
 function updateText() {
-  var size = parseInt($('#maxsize').val(), 10);
-  if (!isNaN(size)) {
-    $('.dyntextval').html($('#dyntext').val());
-    $('.jtextfill').textfill({
-      maxFontPixels: size
-    });
-  }
+  $('.textfill').textfill({
+    maxFontPixels: 300,
+    debug: true
+  });
 }
 
 //Business logic
