@@ -4,11 +4,28 @@ body {
 
 }
 
-.textfill{
+.spanText {
+  font-size: 300px;
+  color: white;
+  font-weight: bold;
+}
+
+.span6 {
+  text-align: center;
 
 }
 
-.spanText {
-  font-size: 200px;
-  color: white;
+.inputStyle input[type="text"] {
+  display: block;
+  margin: auto;
+  width: 20%;
+  font-family: sans-serif;
+  font-size: 28px;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.inputStyle input[type="text"]:focus {
+  border: solid 10px #707070;
 }

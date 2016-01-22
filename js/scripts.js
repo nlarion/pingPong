@@ -8,13 +8,13 @@ $(document).ready(function() {
     $("#result").show();
     event.preventDefault();
   });
+
 });
 
 //UI logic
 function updateText() {
   $('.textfill').textfill({
-    maxFontPixels: 300,
-    debug: true
+    maxFontPixels: 300
   });
 }
 
