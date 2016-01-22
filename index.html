@@ -3,7 +3,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script src="/js/textfill/jquery.textfill.min.js"></script>
+    <script src="js/textfill/jquery.textfill.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#aboutModal">About</button>
+      <button type="button" id="aboutButton" class="btn btn-success btn-lg" data-toggle="modal" data-target="#aboutModal">About</button>
       <div class="row-fluid">
         <div class="col-sm-12">
           <div class="textfill">
@@ -25,7 +25,7 @@
         <div class="span6 offset3 inputStyle">
           <form class="submit" id="submit">
             <div classs="form-group">
-              <button type="submit" class="btn btn-danger btn-circle btn-xl" data-toggle="tooltip" data-placement="left" title="Press when ready">Press</button>
+              <button type="submit" class="btn btn-danger btn-circle btn-lg" data-toggle="tooltip" data-placement="left" title="Press when ready">Press</button>
               <input data-toggle="tooltip" data-placement="right" title="Please enter a whole number > 0" type="text" placeholder="1234..." id="userInput">
             </div>
           </form>
@@ -35,7 +35,7 @@
         <div class="result" id="result"></div>
       </div>
       <div class="row">
-        <div class="again">
+        <div class="span6 offset3 again">
           <button class="btn btn-danger btn-circle btn-xl" data-toggle="tooltip" data-placement="left" title="Try Again?">Again?</button>
         </div>
       </div>

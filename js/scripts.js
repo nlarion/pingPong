@@ -6,6 +6,11 @@ $(document).ready(function() {
   $(".again button").click(function(){
     removeResults();
   });
+
+  $("#aboutModal").on('hidden.bs.modal', function () {
+    //hide focus for about because it wont reset on it's own
+    $("#aboutButton").prop('focus',false);
+  });
   $("form").submit(function(event) {
     var userInput = parseInt($("input#userInput").val());
     if(typeChecker(userInput) && userInput>0){
@@ -14,10 +19,10 @@ $(document).ready(function() {
       $("#result").append(result);
       $("#result, .again").show();
       updateText();
+      console.log(result.length);
       $('html, body').animate({
           scrollTop: $(".again").offset().top
       }, 2000);
-
     } else {
       removeResults();
       $('#alertModal').modal('show');
