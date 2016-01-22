@@ -2,8 +2,8 @@ $(document).ready(function() {
   $(window).resize(updateText);
   updateText();
   $("form").submit(function(event) {
-    var messageInput =$("input#userInput").val();
-    var result = pigLatinSentence(messageInput);
+    var userInput =parseInt($("input#userInput").val());
+    var result = pingPong(userInput);
     $("#result").text(result);
     $("#result").show();
     event.preventDefault();
