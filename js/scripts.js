@@ -28,3 +28,11 @@ var typeChecker = function(number){
     return false;
   }
 };
+
+var sortArray = function(arr){
+  arr.sort(function(a,b){
+    return a-b;
+  });
+
+  return arr;
+}
