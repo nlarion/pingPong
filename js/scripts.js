@@ -2,14 +2,14 @@ $(document).ready(function() {
   $(window).resize(updateText);
   updateText();
   $("form").submit(function(event) {
-    var userInput =parseInt($("input#userInput").val());
+    var userInput = parseInt($("input#userInput").val());
     if(typeChecker(userInput)){
       var result = pingPongArray(userInput);
       $("#result").text(result);
       $("#result").show();
     } else {
-      //TODO:call modal
-      console.log("call modal");
+      $('#alertModal').modal('show');
+      $("input#userInput").val('');
     }
     event.preventDefault();
   });

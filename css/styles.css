@@ -46,5 +46,9 @@ body {
   top: 20px;
   right: 20px;
   z-index: 1;
+}
 
+button.right {
+  margin-left: auto;
+  display: block;
 }
