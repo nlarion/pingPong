@@ -7,11 +7,6 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
-//TODO: check divisible by 15 remove from array
-//TODO: check divisible by 5 remove from array
-//TODO: check divisible by 3 remove from array
-//TODO: sort new array
-//TODO: return new array
 
 var divisibleBy = function(num,divisor){
   if (num % divisor === 0) {
@@ -29,13 +24,24 @@ var typeChecker = function(num){
   }
 };
 
-var sortArray = function(arr){
-  arr.sort(function(a,b){
-    return a-b;
-  });
+var makeUserInputArray = function(num){
+  var arr = [];
+  for (var i = 1; i <= num; i++) {
+    arr.push(i);
+  }
   return arr;
 };
 
 var pingPong = function(userInput){
-  return false;
+  var divisibleByNumbers = [15,5,3];
+  var replaceValues = ["pingpong","pong","ping"];
+  userInput = makeUserInputArray(userInput);
+  for (var i = 0; i < userInput.length; i++) {
+    for (var j = 0; j < divisibleByNumbers.length; j++) {
+      if (divisibleBy(userInput[i],divisibleByNumbers[j])) {
+        userInput[i] = replaceValues[j];
+      }
+    }
+  }
+  return userInput;
 };
