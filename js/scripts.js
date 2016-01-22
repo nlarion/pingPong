@@ -7,3 +7,24 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+//TODO: check divisible by 15 remove from array
+//TODO: check divisible by 5 remove from array
+//TODO: check divisible by 3 remove from array
+//TODO: sort new array
+//TODO: return new array
+
+var divisibleBy = function(userNum,divisor){
+  if (userNum % divisor === 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+var typeChecker = function(number){
+  if (!isNaN(number)) {
+    return true;
+  } else {
+    return false;
+  }
+};
