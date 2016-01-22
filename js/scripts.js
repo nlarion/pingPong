@@ -3,24 +3,49 @@ $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip()
   $(window).resize(updateText);
   updateText();
+  $(".again button").click(function(){
+    removeResults();
+  });
   $("form").submit(function(event) {
     var userInput = parseInt($("input#userInput").val());
     if(typeChecker(userInput) && userInput>0){
-      var result = pingPongArray(userInput);
-      $("#result").text(result);
-      $("#result").show();
+      var result = pingPongToDivs(userInput);
+      removeResults();
+      $("#result").append(result);
+      $("#result, .again").show();
+      updateText();
+      $('html, body').animate({
+          scrollTop: $(".again").offset().top
+      }, 2000);
+
     } else {
+      removeResults();
       $('#alertModal').modal('show');
       $("input#userInput").val('');
+      updateText();
     }
     event.preventDefault();
   });
 });
 
+var removeResults = function(){
+  $("#result").text('');
+  $(".again").hide();
+}
+
 function updateText() {
   $('.textfill').textfill({
     maxFontPixels: 300
   });
+}
+
+var pingPongToDivs = function (userInput){
+  var arr = pingPongArray(userInput);
+  for (var i = 0; i < arr.length; i++) {
+    arr[i]="<div class='textfill'><span class='spanText'>"+arr[i]+"</span></div>";
+  }
+  arr.push("<div>")
+  return arr.join("");
 }
 
 //Business logic

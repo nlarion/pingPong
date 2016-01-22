@@ -56,11 +56,20 @@ button.right {
   z-index: 1;
 }
 
-/*TODO fix button success*/
-.btn-success{
+/*TODO fix button success/about*/
+.btn-success {
   background-color: #2ecc71;
 }
 
-.btn-success:hover{
+.btn-success:hover {
   background-color: #27ae60;
+}
+
+.btn-success:active {
+  background-color: #27ae60;
+
+}
+
+.again {
+  display: none;
 }
