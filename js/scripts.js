@@ -1,9 +1,10 @@
 $(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip()
   $(window).resize(updateText);
   updateText();
   $("form").submit(function(event) {
     var userInput = parseInt($("input#userInput").val());
-    if(typeChecker(userInput)){
+    if(typeChecker(userInput) && userInput>0){
       var result = pingPongArray(userInput);
       $("#result").text(result);
       $("#result").show();
@@ -13,7 +14,6 @@ $(document).ready(function() {
     }
     event.preventDefault();
   });
-
 });
 
 //UI logic

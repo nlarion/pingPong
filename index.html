@@ -25,8 +25,8 @@
         <div class="span6 offset3 inputStyle">
           <form class="submit" id="submit">
             <div classs="form-group">
-              <button type="submit" class="btn btn-danger btn-circle btn-xl">Press</button>
-              <input type="text" placeholder="1234..." id="userInput">
+              <button type="submit" class="btn btn-danger btn-circle btn-xl" data-toggle="tooltip" data-placement="left" title="Press when ready">Press</button>
+              <input data-toggle="tooltip" data-placement="right" title="Please enter a whole number > 0" type="text" placeholder="1234..." id="userInput">
             </div>
           </form>
         </div>
@@ -53,8 +53,8 @@
             </ul>
             <h3>Additional Links:</h3>
             <p>
-              See javascript unit tests<a href="spec/specRunner.html"> here</a><br>
-              An additional part of the <a href="furtherExploration.html">assignment</a>
+              See javascript unit tests <a href="spec/specRunner.html" target="_blank">here</a><br>
+              An additional part of the <a href="furtherExploration.html" target="_blank">assignment</a>
             </p>
             <button type="button" class="btn btn-default right" data-dismiss="modal">Okay</button>
           </div>
@@ -67,7 +67,7 @@
         <div class="modal-content">
           <div class="modal-body">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h3>Please enter a number!</h3>
+            <h3>Please enter a whole number!</h3>
             <button type="button" class="btn btn-default right" data-dismiss="modal">Okay</button>
           </div>
         </div>
