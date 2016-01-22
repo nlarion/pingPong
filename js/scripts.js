@@ -34,6 +34,8 @@ var sortArray = function(arr){
     return a-b;
   });
   return arr;
-}
+};
 
-var pingPong = function(user)
+var pingPong = function(userInput){
+  return false;
+};
