@@ -15,3 +15,9 @@ describe('typeChecker',function(){
     expect(typeChecker("test")).to.equal(false);
   });
 });
+
+describe('sortArray',function(){
+  it("Will take a non-sorted array and return a sorted array with ascending values",function(){
+    expect(sortArray([7,3,4,2,1,9])).to.eql([1,2,3,4,7,9]);
+  });
+});
