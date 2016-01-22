@@ -13,16 +13,16 @@ $(document).ready(function() {
 //TODO: sort new array
 //TODO: return new array
 
-var divisibleBy = function(userNum,divisor){
-  if (userNum % divisor === 0) {
+var divisibleBy = function(num,divisor){
+  if (num % divisor === 0) {
     return true;
   } else {
     return false;
   }
 };
 
-var typeChecker = function(number){
-  if (!isNaN(number)) {
+var typeChecker = function(num){
+  if (!isNaN(num)) {
     return true;
   } else {
     return false;
@@ -33,6 +33,7 @@ var sortArray = function(arr){
   arr.sort(function(a,b){
     return a-b;
   });
-
   return arr;
 }
+
+var pingPong = function(user)
