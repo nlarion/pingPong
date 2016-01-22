@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  $('#maxsize').keyup(updateText);
+  $('#dyntext').keyup(updateText);
+  updateText();
   $("form").submit(function(event) {
     var messageInput =$("input#userInput").val();
     var result = pigLatinSentence(messageInput);
@@ -8,6 +12,18 @@ $(document).ready(function() {
   });
 });
 
+//UI logic
+function updateText() {
+  var size = parseInt($('#maxsize').val(), 10);
+  if (!isNaN(size)) {
+    $('.dyntextval').html($('#dyntext').val());
+    $('.jtextfill').textfill({
+      maxFontPixels: size
+    });
+  }
+}
+
+//Business logic
 var divisibleBy = function(num,divisor){
   if (num % divisor === 0) {
     return true;

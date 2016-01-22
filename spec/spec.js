@@ -1,5 +1,5 @@
 describe('divisibleBy',function(){
-  it("Will return true if user number is divisible by a set number without a remainder",function(){
+  it("Will return true if user number is evenly divisible by a set number without a remainder",function(){
     expect(divisibleBy(15,15)).to.equal(true);
   });
 });
