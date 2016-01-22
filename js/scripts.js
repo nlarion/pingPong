@@ -6,7 +6,6 @@ $(document).ready(function() {
   $(".again button").click(function(){
     removeResults();
   });
-
   $("#aboutModal").on('hidden.bs.modal', function () {
     //hide focus for about because it wont reset on it's own
     $("#aboutButton").prop('focus',false);

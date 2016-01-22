@@ -16,8 +16,8 @@ describe('makeUserInputArray',function(){
   });
 });
 
-describe('pingPong',function(){
+describe('pingPongArray',function(){
   it("Will take a non-sorted array and return a sorted array with ascending values",function(){
-    expect(pingPong(16)).to.eql([1,2,"ping",4,"pong","ping",7,8,"ping","pong",11,"ping",13,14,"pingpong",16]);
+    expect(pingPongArray(16)).to.eql([1,2,"ping",4,"pong","ping",7,8,"ping","pong",11,"ping",13,14,"pingpong",16]);
   });
 });
