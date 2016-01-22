@@ -4,14 +4,13 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     var userInput =parseInt($("input#userInput").val());
     if(typeChecker(userInput)){
-      var result = pingPong(userInput);
+      var result = pingPongArray(userInput);
       $("#result").text(result);
       $("#result").show();
     } else {
       //TODO:call modal
       console.log("call modal");
     }
-
     event.preventDefault();
   });
 
@@ -49,7 +48,7 @@ var makeUserInputArray = function(num){
   return arr;
 };
 
-var pingPong = function(userInput){
+var pingPongArray = function(userInput){
   var divisibleByNumbers = [15,5,3];
   var replaceValues = ["pingpong","pong","ping"];
   userInput = makeUserInputArray(userInput);

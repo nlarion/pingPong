@@ -9,10 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <title>PingPong</title>
+    <title>Enter a Number</title>
   </head>
   <body>
     <div class="container-fluid">
+      <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#aboutModal">About</button>
       <div class="row-fluid">
         <div class="col-sm-12">
           <div class="textfill">
@@ -32,6 +33,31 @@
       </div>
       <div class="row">
         <div id="result"></div>
+      </div>
+    </div>
+    <!-- about Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">About Enter a Number</h4>
+          </div>
+          <div class="modal-body">
+            <h3>Hello!</h3>
+            <p>This site will take a number and return a range of numbers from 1 to the number you selected with the following rules:</p>
+            <ul>
+              <li>Numbers divisible by 3 will be replaced with "ping"</li>
+              <li>Numbers divisible by 5 will be replaced with "pong"</li>
+              <li>Numbers divisible by 15 will be replaced with "pingpong"</li>
+            </ul>
+            <h3>Additional Links:</h3>
+            <p>
+              See javascript unit tests<a href="spec/specRunner.html"> here</a><br>
+              An additional part of the <a href="furtherExploration.html">assignment</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="js/bootstrap.min.js"></script>
