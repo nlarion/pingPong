@@ -12,11 +12,10 @@ body {
 
 .span6 {
   text-align: center;
-
 }
 
 .inputStyle input[type="text"] {
-  display: block;
+  display: inline;
   margin: auto;
   width: 20%;
   font-family: sans-serif;
@@ -28,4 +27,16 @@ body {
 
 .inputStyle input[type="text"]:focus {
   border: solid 10px #707070;
+}
+
+.btn-circle.btn-xl {
+  display: inline;
+  width: 90px;
+  height: 90px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 45px;
+  margin-right: 10px;
+  margin-bottom: 15px;
 }
