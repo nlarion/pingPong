@@ -3,9 +3,15 @@ $(document).ready(function() {
   updateText();
   $("form").submit(function(event) {
     var userInput =parseInt($("input#userInput").val());
-    var result = pingPong(userInput);
-    $("#result").text(result);
-    $("#result").show();
+    if(typeChecker(userInput)){
+      var result = pingPong(userInput);
+      $("#result").text(result);
+      $("#result").show();
+    } else {
+      //TODO:call modal
+      console.log("call modal");
+    }
+
     event.preventDefault();
   });
 

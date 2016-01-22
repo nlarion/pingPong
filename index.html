@@ -3,6 +3,7 @@
   <head>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="/js/textfill/jquery.textfill.min.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,46 +12,27 @@
     <title>PingPong</title>
   </head>
   <body>
-    <div class="container">
-      <a href="spec/specRunner.html">Spec Link</a> <br>
-      <a href="pingPong.html">PingPong Project</a> <br>
-      <a href="furtherExploration.html">Further Exploration</a> <br>
-      <h1>TODO:</h1>
-      <p>
-        Create a web application that takes a number from a user and returns a range of numbers from 1 to the chosen number with the following exceptions:
-      </p>
-      <ul>
-        <li>Numbers divisible by 3 are replaced with "ping"</li>
-        <li>Numbers divisible by 5 are replaced with "pong"</li>
-        <li>Numbers divisible by 15 are replaced with "pingpong"</li>
-      </ul>
-      <p>
-        A user should be able to enter a new number and see new results over and over again.
-      </p>
-
-      <h3>This week's objectives</h3>
-      <ul>
-        <li>Test coverage is thorough</li>
-        <li>Tests are passing</li>
-        <li>JavaScript business logic and user interface logic are separate</li>
-        <li>Variable names are descriptive and use lower camel case (e.g. myVariableExample)</li>
-        <li>Code has proper indentation and spacing</li>
-        <li>All previous objectives have been met</li>
-      </ul>
-      <h4>Further exploration (optional)</h4>
-      <ul>
-        <li>recreate the example layout without using Bootstrap </li>
-        <li>add images</li>
-        <li>implement different behaviors/effects/images for different inputs</li>
-      </ul>
-      <form id="pigLatinSubmit">
-        <div class="form-group">
-          <label for="message">Enter a number to play ping pong!</label>
-          <input type="text" id="userInput">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-sm-12">
+          <div class="textfill">
+            <span class="spanText">Enter a Number</span>
+          </div>
         </div>
-        <button type="submit" class="btn">Find out!</button>
-      </form>
-      <div id="result"></div>
+      </div>
+      <div class="row">
+        <div class="span6 offset3 inputStyle">
+          <form class="submit" id="submit">
+            <div classs="form-group">
+              <button type="submit" class="btn btn-danger btn-circle btn-xl">Press</button>
+              <input type="text" placeholder="1234..." id="userInput">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div id="result"></div>
+      </div>
     </div>
     <script src="js/bootstrap.min.js"></script>
   </body>
