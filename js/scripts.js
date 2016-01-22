@@ -1,3 +1,4 @@
+//UI logic
 $(document).ready(function() {
   $('[data-toggle="tooltip"]').tooltip()
   $(window).resize(updateText);
@@ -16,7 +17,6 @@ $(document).ready(function() {
   });
 });
 
-//UI logic
 function updateText() {
   $('.textfill').textfill({
     maxFontPixels: 300

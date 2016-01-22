@@ -1,7 +1,10 @@
 body {
   background-color: #2980b9;
-  /*background-color: #3498db;*/
+}
 
+button.right {
+  margin-left: auto;
+  display: block;
 }
 
 .spanText {
@@ -39,6 +42,11 @@ body {
   border-radius: 45px;
   margin-right: 10px;
   margin-bottom: 15px;
+  background-color: #e74c3c;
+
+}
+.btn-circle.btn-xl:hover {
+  background-color: #c0392b;
 }
 
 .btn-success{
@@ -48,7 +56,11 @@ body {
   z-index: 1;
 }
 
-button.right {
-  margin-left: auto;
-  display: block;
+/*TODO fix button success*/
+.btn-success{
+  background-color: #2ecc71;
+}
+
+.btn-success:hover{
+  background-color: #27ae60;
 }
