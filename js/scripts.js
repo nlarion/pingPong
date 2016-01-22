@@ -18,10 +18,9 @@ $(document).ready(function() {
       $("#result").append(result);
       $("#result, .again").show();
       updateText();
-      console.log(result.length);
       $('html, body').animate({
           scrollTop: $(".again").offset().top
-      }, 2000);
+      }, result.length * 5); //result.length * x is the ms delay to account for large results
     } else {
       removeResults();
       $('#alertModal').modal('show');
